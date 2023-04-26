@@ -19,7 +19,6 @@ public class JsonConfig {
     private static final ArrayList<String> commandNames = new ArrayList<>();
     private static final ArrayList<String> permissions = new ArrayList<>();
     private static final ArrayList<String> onRevokePermissionMessages = new ArrayList<>();
-    private static final ArrayList<Boolean> savesToDB = new ArrayList<>();
     private static JsonObject rootJsonObject = getRootJsonObject();
 
     public static JsonObject getRootJsonObject() {
@@ -48,13 +47,11 @@ public class JsonConfig {
         commandNames.clear();
         onAddPermissionMessages.clear();
         onRevokePermissionMessages.clear();
-        savesToDB.clear();
         for (JsonElement commandElement : commands) {
             JsonObject command = commandElement.getAsJsonObject();
 
             commandNames.add(command.get("name").getAsString());
             permissions.add(command.get("permission").getAsString());
-            savesToDB.add(command.get("saveToDB").getAsBoolean());
             onAddPermissionMessages.add(ChatColor.translateAlternateColorCodes('&',  command.get("onAddPermissionMessage").getAsString()));
             onRevokePermissionMessages.add(ChatColor.translateAlternateColorCodes('&', command.get("onRevokePermissionMessage").getAsString()));
         }
@@ -72,10 +69,6 @@ public class JsonConfig {
 
     public static String getPermission(int index) {
         return permissions.get(index);
-    }
-
-    public static boolean getSaveToDB(int index) {
-        return savesToDB.get(index);
     }
 
     public static String getOnAddPermissionMessage(int index) {
