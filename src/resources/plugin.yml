@@ -1,0 +1,14 @@
+name: PermissionSwitcher
+main: io.subtoqz.permission_switcher.PermissionSwitcherMain
+version: ${project.version}
+author: ${author}
+api-version: 1.13
+load: STARTUP
+softdepend: [LuckPerms]
+commands:
+  permissionswitcher:
+    description: command for manage plugin
+permissions:
+  permissionswitcher:
+    children:
+      - reload

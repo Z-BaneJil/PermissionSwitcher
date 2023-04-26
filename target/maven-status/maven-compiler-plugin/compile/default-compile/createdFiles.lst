@@ -1,0 +1,7 @@
+io\subtoqz\permission_switcher\PermissionSwitcherMain.class
+io\subtoqz\permission_switcher\command\SwitchPermissionCommandExecutor.class
+io\subtoqz\permission_switcher\json\JsonConfig.class
+io\subtoqz\permission_switcher\command\CommandRegisterer.class
+io\subtoqz\permission_switcher\command\PermissionCommandExecutor.class
+io\subtoqz\permission_switcher\exception\CommandNotPreparedException.class
+io\subtoqz\permission_switcher\properties\PropertiesFile.class

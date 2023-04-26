@@ -1,0 +1,18 @@
+locale: en_US
+
+commands:
+  -
+    name: "globalchat"
+    aliases:
+      - "gchat"
+    onAddPermissionMessage: "&aGlobal chat enabled."
+    onRevokePermissionMessage: "&aGlobal chat disabled."
+    permission: "chatty.chat.global"
+
+  -
+    name: "localchat"
+    aliases:
+      - "lchat"
+    onAddPermissionMessage: "&aLocal chat enabled."
+    onRevokePermissionMessage: "&aLocal chat disabled."
+    permission: "chatty.chat.local"
